@@ -1057,15 +1057,38 @@ p, li, span, a, button {
     background: var(--color-secondary);
     transform: translateY(-5px);
 }
+.logo-img {
+    height: 45px;
+    width: auto;
+    transition: 0.4s ease;
+}
+
+.navbar.scrolled .logo-img {
+    height: 38px;
+}
+
+.brand-text {
+    font-weight: 800;
+    font-size: 1.6rem;
+    letter-spacing: -0.5px;
+    color: var(--primary);
+}
+
+.brand-text span {
+    background: var(--luxury-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="#home">
-                <i class="fas fa-cube me-2"></i>Beyond<span>Concept</span>
-            </a>
+           <a class="navbar-brand d-flex align-items-center" href="#home">
+    <img src="assets/images/logo.png" alt="Beyond Concept Logo" class="logo-img me-2">
+    <span class="brand-text">Beyond Concept</span>
+</a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -1154,7 +1177,7 @@ p, li, span, a, button {
             
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                    <img src="assets/images/frnt.jpeg"
                          alt="Beyond Concept Construction" class="img-fluid rounded-3 shadow-lg">
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
@@ -1457,7 +1480,7 @@ p, li, span, a, button {
         </div>
     </section>
 
-    <!-- Blog Section -->
+    
     <!-- Blog Section -->
 <section id="blog" class="blog-section">
     <div class="container">
@@ -1471,10 +1494,11 @@ p, li, span, a, button {
             <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
                 <div class="blog-card">
                     <div class="blog-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Rain-Ready Homes" class="blog-image">
-                        <div class="blog-category">Design Tips</div>
-                    </div>
+    <img src="assets/images/blog1.png"
+         alt="Rain-Ready Homes"
+         class="blog-image">
+    <div class="blog-category">Design Tips</div>
+</div>
                     <div class="blog-content">
                         <h4>Rain-Ready Homes: Monsoon-Proof Design Tips</h4>
                         <p class="mb-3">Learn how to design homes that stand strong against Kerala's heavy rainfall with our monsoon-proof strategies.</p>
@@ -1489,7 +1513,7 @@ p, li, span, a, button {
             <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="blog-card">
                     <div class="blog-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                        <img src="assets/images/blog2.png" 
                              alt="Dream Home Journey" class="blog-image">
                         <div class="blog-category">Construction</div>
                     </div>
@@ -1507,7 +1531,7 @@ p, li, span, a, button {
             <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="blog-card">
                     <div class="blog-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                        <img src="assets/images/blog3.png" 
                              alt="Future of Construction" class="blog-image">
                         <div class="blog-category">Innovation</div>
                     </div>
@@ -1525,7 +1549,7 @@ p, li, span, a, button {
             <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="blog-card">
                     <div class="blog-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                        <img src="assets/images/blog4.png" 
                              alt="Interior Design" class="blog-image">
                         <div class="blog-category">Interior Design</div>
                     </div>
@@ -1543,7 +1567,7 @@ p, li, span, a, button {
             <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
                 <div class="blog-card">
                     <div class="blog-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                        <img src="assets/images/blog5.png" 
                              alt="Nalukettu Homes" class="blog-image">
                         <div class="blog-category">Traditional Architecture</div>
                     </div>
@@ -1561,7 +1585,7 @@ p, li, span, a, button {
             <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
                 <div class="blog-card">
                     <div class="blog-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                        <img src="assets/images/blog6.png" 
                              alt="Vastu Matters" class="blog-image">
                         <div class="blog-category">Vastu</div>
                     </div>
@@ -1579,7 +1603,7 @@ p, li, span, a, button {
             <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="blog-card">
                     <div class="blog-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1545239351-ef35f43d514b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                        <img src="assets/images/blog7.png" 
                              alt="Temple Construction" class="blog-image">
                         <div class="blog-category">Heritage</div>
                     </div>
@@ -1597,7 +1621,7 @@ p, li, span, a, button {
             <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
                 <div class="blog-card">
                     <div class="blog-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                        <img src="assets/images/blog8.png" 
                              alt="Interior Finishing" class="blog-image">
                         <div class="blog-category">Interior Design</div>
                     </div>
@@ -1615,7 +1639,7 @@ p, li, span, a, button {
             <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
                 <div class="blog-card">
                     <div class="blog-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                        <img src="assets/images/blog9.png" 
                              alt="Quality Construction" class="blog-image">
                         <div class="blog-category">Quality</div>
                     </div>
@@ -1658,8 +1682,9 @@ p, li, span, a, button {
                             <div>
                                 <h5 class="text-white">Contact Information</h5>
                                 <p class="text-white mb-0">
-                                    Office: +91 8086 335563<br>
-                                    Email: enquiry@beyondconceptdw.com
+                                    Office: +91 9061 953299<br>
+                                    Mobile: +91 8086 335563<br>
+                                    Email: beyondconceptdw@gmail.com
                                 </p>
                             </div>
                         </div>
@@ -1669,8 +1694,8 @@ p, li, span, a, button {
                             <div>
                                 <h5 class="text-white">Business Hours</h5>
                                 <p class="text-white mb-0">
-                                    Monday - Saturday: 9:00 AM - 7:00 PM<br>
-                                    Sunday: 10:00 AM - 5:00 PM
+                                    Monday - Saturday: 9:00 AM - 6:00 PM<br>
+                                   
                                 </p>
                             </div>
                         </div>
@@ -1774,9 +1799,10 @@ p, li, span, a, button {
                 <div class="col-lg-3 col-md-4">
                     <h4 class="mb-4">Contact Us</h4>
                     <p class="mb-3"><i class="fas fa-map-marker-alt me-2"></i> Near To Mannadi Old Kavu Temple, Mannady P.O., Pathanamthitta, Kerala</p>
+                    <p class="mb-3"><i class="fas fa-phone me-2"></i> +91 9061 953299</p>
                     <p class="mb-3"><i class="fas fa-phone me-2"></i> +91 8086 335563</p>
-                    <p class="mb-3"><i class="fas fa-envelope me-2"></i> enquiry@beyondconceptdw.com</p>
-                    <p class="mb-0"><i class="fas fa-clock me-2"></i> Mon-Sat: 9AM-7PM, Sun: 10AM-5PM</p>
+                    <p class="mb-3"><i class="fas fa-envelope me-2"></i> beyondconceptdw@gmail.com</p>
+                    <p class="mb-0"><i class="fas fa-clock me-2"></i> Mon-Sat: 9AM-6PM</p>
                 </div>
             </div>
             
@@ -1807,7 +1833,7 @@ p, li, span, a, button {
                 </div>
                 <div class="modal-body">
                     <div class="text-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                        <img src="assets/images/blog1.png" 
                              alt="Monsoon-Proof Design" class="img-fluid rounded-3 mb-4">
                     </div>
                     
@@ -1866,7 +1892,7 @@ p, li, span, a, button {
                 </div>
                 <div class="modal-body">
                     <div class="text-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                        <img src="assets/images/blog2.png" 
                              alt="Dream Home Journey" class="img-fluid rounded-3 mb-4">
                     </div>
                     
@@ -1926,7 +1952,7 @@ p, li, span, a, button {
                 </div>
                 <div class="modal-body">
                     <div class="text-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                        <img src="assets/images/blog3.png" 
                              alt="Future of Construction" class="img-fluid rounded-3 mb-4">
                     </div>
                     
@@ -1986,7 +2012,7 @@ p, li, span, a, button {
                 </div>
                 <div class="modal-body">
                     <div class="text-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                        <img src="assets/images/blog4.png" 
                              alt="Interior Design" class="img-fluid rounded-3 mb-4">
                     </div>
                     
@@ -2080,7 +2106,7 @@ p, li, span, a, button {
                 </div>
                 <div class="modal-body">
                     <div class="text-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                        <img src="assets/images/blog5.png" 
                              alt="Nalukettu Home" class="img-fluid rounded-3 mb-4">
                     </div>
                     
@@ -2185,7 +2211,7 @@ p, li, span, a, button {
                 </div>
                 <div class="modal-body">
                     <div class="text-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                        <img src="assets/images/blog6.png" 
                              alt="Vastu Home" class="img-fluid rounded-3 mb-4">
                     </div>
                     
@@ -2270,7 +2296,7 @@ p, li, span, a, button {
                 </div>
                 <div class="modal-body">
                     <div class="text-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1545239351-ef35f43d514b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                        <img src="assets/images/blog7.png" 
                              alt="Temple Construction" class="img-fluid rounded-3 mb-4">
                     </div>
                     
@@ -2350,7 +2376,7 @@ p, li, span, a, button {
                 </div>
                 <div class="modal-body">
                     <div class="text-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                        <img src="assets/images/blog8.png" 
                              alt="Interior Finishing" class="img-fluid rounded-3 mb-4">
                     </div>
                     
@@ -2447,7 +2473,7 @@ p, li, span, a, button {
                 </div>
                 <div class="modal-body">
                     <div class="text-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                        <img src="assets/images/blog9.png" 
                              alt="Quality Construction" class="img-fluid rounded-3 mb-4">
                     </div>
                     
