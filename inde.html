@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond Concept Design World | Premier Construction & Design Experts in Kerala</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (More Professional) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Splide Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <!-- Glide.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <style>
+        :root {
+            --primary: #0a3d62;
+            --primary-dark: #072947;
+            --primary-light: #3c8dbc;
+            --secondary: #f9a826;
+            --secondary-dark: #e89c15;
+            --accent: #38b2ac;
+            --light: #f8f9fa;
+            --dark: #1a252f;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --success: #38b2ac;
+            --shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            --transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            --border-radius: 12px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', 'Open Sans', sans-serif;
+            color: var(--dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            background: linear-gradient(135deg, #f8f9fa 0%, #f1f3f4 100%);
+            font-weight: 400;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .display-font {
+            font-family: 'Lora', serif;
+            font-weight: 600;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 14px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, var(--secondary), var(--primary));
+            border-radius: 10px;
+            border: 3px solid #f1f1f1;
+        }
+        
+        /* Navigation - Professional Style */
+        .navbar {
+            background: rgba(255, 255, 255, 0.98) !important;
+            backdrop-filter: blur(25px);
+            box-shadow: 0 10px 50px rgba(10, 61, 98, 0.12);
+            padding: 1.2rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10000;
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(10, 61, 98, 0.08);
+        }
+        
+        .navbar.scrolled {
+            padding: 0.9rem 0;
+            box-shadow: 0 15px 60px rgba(10, 61, 98, 0.2);
+        }
+        
+        .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.8rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: -0.5px;
+        }
+        
+        .navbar-brand span {
+            color: var(--secondary);
+            position: relative;
+        }
+        
+        .navbar-brand span:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            background: rgba(249, 168, 38, 0.25);
+            bottom: 3px;
+            left: 0;
+            z-index: -1;
+            border-radius: 4px;
+        }
+        
+        .nav-link {
+            font-weight: 600;
+            color: var(--primary) !important;
+            margin: 0 0.4rem;
+            padding: 0.8rem 1.3rem !important;
+            border-radius: 10px;
+            transition: var(--transition);
+            position: relative;
+            font-size: 1.05rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--secondary) !important;
+            background: rgba(249, 168, 38, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.4s ease;
+            border-radius: 3px;
+        }
+        
+        .nav-link:hover:after, .nav-link.active:after {
+            width: 80%;
+        }
+        
+        /* Hero Section with 3D Parallax */
+        .hero-section {
+            background: linear-gradient(135deg, rgba(10, 61, 98, 0.95) 0%, rgba(60, 141, 188, 0.85) 100%), url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: white;
+            padding: 180px 0 100px;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-title {
+            font-size: 3.8rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            max-width: 700px;
+        }
+        
+        .highlight {
+            color: var(--secondary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .highlight:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 12px;
+            background: rgba(249, 168, 38, 0.3);
+            bottom: 5px;
+            left: 0;
+            z-index: -1;
+            border-radius: 6px;
+            transform: skewX(-10deg);
+        }
+        
+        /* 3D Floating Elements */
+        .floating-element {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            animation: float 6s ease-in-out infinite;
+            z-index: 1;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        /* Stats Section with Animated Counters */
+        .stats-section {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-radius: var(--border-radius);
+            background: white;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.8rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 120px 0;
+            background-color: white;
+            position: relative;
+        }
+        
+        /* Services Section with 3D Icons */
+        .services-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #eef0f2 100%);
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            height: 100%;
+            transition: var(--transition);
+            border: 1px solid var(--light-gray);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.15);
+            border-color: var(--secondary);
+        }
+        
+        .service-icon-3d {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 1.8rem;
+            display: inline-block;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, rgba(249, 168, 38, 0.1), rgba(56, 178, 172, 0.1));
+            border-radius: 16px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-icon-3d:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            opacity: 0;
+            transition: var(--transition);
+            z-index: -1;
+        }
+        
+        .service-card:hover .service-icon-3d {
+            color: white;
+            transform: rotateY(180deg) scale(1.1);
+        }
+        
+        .service-card:hover .service-icon-3d:before {
+            opacity: 1;
+        }
+        
+        /* How It Works Section */
+        .process-section {
+            padding: 120px 0;
+            background-color: white;
+        }
+        
+        .process-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            transition: var(--transition);
+            border: 1px solid var(--light-gray);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .process-step {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            box-shadow: 0 10px 30px rgba(10, 61, 98, 0.3);
+        }
+        
+        /* Projects Gallery */
+        .projects-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #eef0f2 100%);
+        }
+        
+        .project-card {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+            height: 400px;
+            transition: var(--transition);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+        }
+        
+        .project-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(10, 61, 98, 0.9), transparent);
+            color: white;
+            padding: 2rem;
+            transform: translateY(100%);
+            transition: transform 0.5s ease;
+        }
+        
+        .project-card:hover .project-overlay {
+            transform: translateY(0);
+        }
+        
+        /* Testimonials */
+        .testimonials-section {
+            padding: 120px 0;
+            background-color: white;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            height: 100%;
+            position: relative;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
+        }
+        
+        .stars {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        
+        /* Blog Section - Enhanced */
+        .blog-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #eef0f2 100%);
+        }
+        
+        .blog-card {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            height: 100%;
+            background: white;
+            position: relative;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+        }
+        
+        .blog-image-wrapper {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .blog-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1s ease;
+        }
+        
+        .blog-card:hover .blog-image {
+            transform: scale(1.1);
+        }
+        
+        .blog-category {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--secondary);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            z-index: 2;
+        }
+        
+        .blog-content {
+            padding: 2rem;
+        }
+        
+        .blog-meta {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        /* Blog Detail Modal */
+        .blog-modal .modal-content {
+            border-radius: 20px;
+            overflow: hidden;
+            border: none;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.3);
+        }
+        
+        .blog-modal .modal-header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            border-bottom: none;
+            padding: 2rem;
+        }
+        
+        .blog-modal .modal-body {
+            padding: 2.5rem;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            position: relative;
+        }
+        
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 100px 0 50px;
+            position: relative;
+        }
+        
+        .footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+        
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.6);
+            z-index: 10000;
+            transition: var(--transition);
+            animation: pulse-green 2s infinite;
+            text-decoration: none;
+        }
+        
+        @keyframes pulse-green {
+            0% { box-shadow: 0 10px 40px rgba(37, 211, 102, 0.6); }
+            50% { box-shadow: 0 10px 50px 15px rgba(37, 211, 102, 0.8); }
+            100% { box-shadow: 0 10px 40px rgba(37, 211, 102, 0.6); }
+        }
+        
+        /* Section Titles */
+        .section-title {
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 1.5rem;
+            font-size: 2.8rem;
+            font-weight: 800;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 6px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray);
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        /* Buttons */
+        .btn-primary-custom {
+            background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+            border: none;
+            color: white;
+            padding: 1rem 2.2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            box-shadow: 0 8px 25px rgba(249, 168, 38, 0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .btn-primary-custom:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(249, 168, 38, 0.6);
+            color: white;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .hero-title { font-size: 3.2rem; }
+            .section-title { font-size: 2.5rem; }
+        }
+        
+        @media (max-width: 992px) {
+            .hero-title { font-size: 2.8rem; }
+            .section-title { font-size: 2.2rem; }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.3rem; }
+            .hero-subtitle { font-size: 1.1rem; }
+            .section-title { font-size: 1.8rem; }
+            .stat-number { font-size: 2.8rem; }
+        }
+        
+        /* Professional Animations */
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* 3D Card Effect */
+        .card-3d {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        
+        .card-3d:hover {
+            transform: rotateY(10deg) rotateX(5deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-cube"></i> Beyond<span>Concept</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#process">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                
+                <a href="https://wa.me/918086335563" class="btn btn-primary-custom ms-lg-3 mt-3 mt-lg-0" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Whatsapp Us
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <!-- 3D Floating Elements -->
+        <div class="floating-element" style="width: 200px; height: 200px; top: 10%; left: 5%; animation-delay: 0s;"></div>
+        <div class="floating-element" style="width: 150px; height: 150px; bottom: 20%; right: 8%; animation-delay: 2s;"></div>
+        <div class="floating-element" style="width: 120px; height: 120px; top: 30%; right: 15%; animation-delay: 4s;"></div>
+        
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="hero-title animate__animated animate__fadeInUp">
+                        Best 2D & 3D Elevation Designers in <span class="highlight">Adoor, Kerala</span>
+                    </h1>
+                    <p class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">
+                        Beyond Concept specializes in stunning elevation designs that enhance the visual appeal and value of your property. With a perfect mix of innovation and architectural excellence, we bring your dream facade to life.
+                    </p>
+                    <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-2s">
+                        <a href="#contact" class="btn btn-primary-custom me-3 mb-3">
+                            <i class="fas fa-calendar-check"></i> Start Your Project
+                        </a>
+                        <a href="#projects" class="btn btn-outline-light" style="border: 2px solid white; color: white; padding: 1rem 2.2rem; border-radius: 50px;">
+                            <i class="fas fa-eye"></i> View Portfolio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card fade-in-up" data-aos="fade-up">
+                        <span class="stat-number" data-count="95">0</span>
+                        <h5>Years in Construction</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card fade-in-up" data-aos="fade-up" data-aos-delay="100">
+                        <span class="stat-number" data-count="1123">0</span>
+                        <h5>CAD Drawings</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card fade-in-up" data-aos="fade-up" data-aos-delay="200">
+                        <span class="stat-number" data-count="608">0</span>
+                        <h5>Completed Works</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card fade-in-up" data-aos="fade-up" data-aos-delay="300">
+                        <span class="stat-number" data-count="25">0</span>
+                        <h5>Ongoing Projects</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Our Company</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                Designing Spaces Where Innovation and Excellence Unite – Shaping Environments for Inspired Living
+            </p>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Beyond Concept Construction" class="img-fluid rounded-3 shadow-lg">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <p class="lead mb-4">
+                        With over 95 years of trusted craftsmanship across three generations, Beyond Concept Design World brings a legacy of excellence to every project we undertake.
+                    </p>
+                    <p class="mb-4">
+                        Our portfolio extends beyond homes and commercial spaces, encompassing intricate temple works, monuments, and exquisite temple sculptures that reflect our commitment to quality and heritage. We blend time-honored values with contemporary design to deliver projects that stand the test of time while meeting the needs of modern living.
+                    </p>
+                    <p class="mb-4">
+                        Every project is treated with utmost care, ensuring timely completion without compromising on detail or durability. Discover how Beyond Concept Design World can transform your vision into a lasting reality.
+                    </p>
+                    <a href="#contact" class="btn btn-primary-custom">
+                        <i class="fas fa-handshake"></i> Discover More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Our Services</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                We specialize in delivering comprehensive building and construction services for both residential and commercial projects in Kerala
+            </p>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="service-card">
+                        <div class="service-icon-3d">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h4>3D Elevation Design</h4>
+                        <p>We offer the best 3D building elevation plans for homes, commercial buildings, offices design for all exterior and interior with cut section view.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-icon-3d">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h4>Estimations</h4>
+                        <p>Providing our clients with a wide range of estimation services to cover their needs. Get in touch today to learn more about what we can offer you.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon-3d">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <h4>Architectural Plans</h4>
+                        <p>Civil Architectural plans like Site plan, Permission Plan, Elevations, Sections, location plan, Site and service plan, completion plan for residential and commercial buildings.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
+                        <div class="service-icon-3d">
+                            <i class="fas fa-compass"></i>
+                        </div>
+                        <h4>Vastu Consulting</h4>
+                        <p>Get the best advice on Vastu consulting services in Kerala for harmonious living spaces that promote positive energy flow and well-being.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card">
+                        <div class="service-icon-3d">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4>Electrical Drawings</h4>
+                        <p>Electrical drawings thoughtfully designed for residential and commercial buildings, ensuring safety, efficiency, and modern electrical solutions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-card">
+                        <div class="service-icon-3d">
+                            <i class="fas fa-couch"></i>
+                        </div>
+                        <h4>Interior Designing</h4>
+                        <p>We are one of the best home interior design companies that provides everything from the smallest redesign to the largest build.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="process" class="process-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">How It Works</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                Building Your Dream Home with Beyond Concept Builders
+            </p>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="process-card">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <h4>Consultation & Planning</h4>
+                        </div>
+                        <p>We begin with an in-depth consultation to understand your needs, preferences, and budget. Our team collaborates with you to conceptualize a design that aligns with your lifestyle and the local environment.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="process-card">
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <h4>Design & Approvals</h4>
+                        </div>
+                        <p>Our experienced architects craft detailed floor plans and elevations, ensuring compliance with Kerala's building codes and Vastu principles. We assist in obtaining all necessary permits and approvals from local authorities.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="process-card">
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <h4>Site Preparation & Foundation</h4>
+                        </div>
+                        <p>Prior to construction, we conduct soil testing to determine the appropriate foundation type. Site grading and excavation are carried out to ensure proper drainage and stability, crucial for Kerala's monsoon climate.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="process-card">
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <h4>Construction Phase</h4>
+                        </div>
+                        <p>Our skilled workforce constructs the superstructure using quality materials suited for Kerala weather conditions. Regular updates and transparent communication keep you informed throughout the build.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="process-card">
+                        <div class="process-step">
+                            <div class="step-number">5</div>
+                            <h4>Finishing Touches</h4>
+                        </div>
+                        <p>We handle all aspects of interior and exterior finishing, including plumbing, electrical work, painting, and landscaping. Our attention to detail ensures a polished, move-in-ready home.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="process-card">
+                        <div class="process-step">
+                            <div class="step-number">6</div>
+                            <h4>Handover & Support</h4>
+                        </div>
+                        <p>Upon completion, we conduct a thorough walkthrough with you to ensure satisfaction. We provide all necessary documentation and remain available for any post-construction support you may need.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Recent Projects</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                A showcase of our diverse portfolio across residential and commercial projects
+            </p>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Modern Villa" class="img-fluid" style="height: 100%; object-fit: cover;">
+                        <div class="project-overlay">
+                            <h4>Contemporary Villa</h4>
+                            <p>Adoor, Kerala | 2025</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Commercial Complex" class="img-fluid" style="height: 100%; object-fit: cover;">
+                        <div class="project-overlay">
+                            <h4>Commercial Complex</h4>
+                            <p>Pathanamthitta | 2024</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Traditional Home" class="img-fluid" style="height: 100%; object-fit: cover;">
+                        <div class="project-overlay">
+                            <h4>Nalukettu Heritage Home</h4>
+                            <p>Adoor | 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Latest Blogs & Insights</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                Stay updated with construction trends, design ideas, and industry insights
+            </p>
+            
+            <div class="row g-4">
+                <!-- Blog 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="blog-card">
+                        <div class="blog-image-wrapper">
+                            <span class="blog-category">Design Tips</span>
+                            <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Monsoon-Proof Design" class="blog-image">
+                        </div>
+                        <div class="blog-content">
+                            <h4 class="mb-3">Rain-Ready Homes: Monsoon-Proof Design Tips</h4>
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar me-1"></i> Feb 10, 2026</span>
+                                <span><i class="far fa-clock me-1"></i> 5 min read</span>
+                            </div>
+                            <p class="mb-4">Kerala's monsoons bring unique construction challenges. Learn how to design homes that stand strong against heavy rainfall...</p>
+                            <a href="#" class="btn btn-primary-custom w-100" data-bs-toggle="modal" data-bs-target="#blogModal1">
+                                <i class="fas fa-book-reader me-2"></i> Read Full Article
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-card">
+                        <div class="blog-image-wrapper">
+                            <span class="blog-category">Construction</span>
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Dream Home Journey" class="blog-image">
+                        </div>
+                        <div class="blog-content">
+                            <h4 class="mb-3">From Sketch to Structure: Building Dream Homes</h4>
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar me-1"></i> Jan 28, 2026</span>
+                                <span><i class="far fa-clock me-1"></i> 6 min read</span>
+                            </div>
+                            <p class="mb-4">At Beyond Concept, we believe building a home is about trust, care, and turning dreams into reality...</p>
+                            <a href="#" class="btn btn-primary-custom w-100" data-bs-toggle="modal" data-bs-target="#blogModal2">
+                                <i class="fas fa-book-reader me-2"></i> Read Full Article
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog 3 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-card">
+                        <div class="blog-image-wrapper">
+                            <span class="blog-category">Innovation</span>
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Future of Construction" class="blog-image">
+                        </div>
+                        <div class="blog-content">
+                            <h4 class="mb-3">Building Dreams: The Future of Construction</h4>
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar me-1"></i> Jan 15, 2026</span>
+                                <span><i class="far fa-clock me-1"></i> 7 min read</span>
+                            </div>
+                            <p class="mb-4">Combining traditional craftsmanship with modern technology to deliver exceptional results...</p>
+                            <a href="#" class="btn btn-primary-custom w-100" data-bs-toggle="modal" data-bs-target="#blogModal3">
+                                <i class="fas fa-book-reader me-2"></i> Read Full Article
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="#" class="btn btn-outline-primary" style="padding: 1rem 3rem; border: 2px solid var(--primary); color: var(--primary); border-radius: 50px;">
+                    <i class="fas fa-newspaper me-2"></i> View All Articles
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Satisfied Customers</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                Hear from homeowners who transformed their dreams into reality
+            </p>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-4">"The project was coordinated, substantially reducing the time-frame of completion..."</p>
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <h5 class="mb-1">Mr. Jean Jose Kottarakkara</h5>
+                                <p class="text-muted mb-0">Adoor, Kerala</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-4">"We would like to thank you for your help, design advice, and your attention to detail. You have certainly helped make our dream come true."</p>
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <h5 class="mb-1">Mr. Ajith Amisury</h5>
+                                <p class="text-muted mb-0">Pathanamthitta, Kerala</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-4">"I would like to express my gratitude to Beyond Concept Building Contracting for successfully bringing our dream home to life."</p>
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <h5 class="mb-1">Ms. Dhanaya Krishnan</h5>
+                                <p class="text-muted mb-0">Adoor, Kerala</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-4">"I would like to thank Beyond Concept Building Contracting for their commitment to the completion of our magnificent dream home."</p>
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <h5 class="mb-1">Ms. Karthika Manjula</h5>
+                                <p class="text-muted mb-0">Pathanamthitta, Kerala</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+                    <h2 class="display-font text-white mb-4">Discuss Your Next Project</h2>
+                    <p class="text-white-50 mb-5">Let's transform your vision into a stunning reality. Contact us today for a free consultation.</p>
+                    
+                    <div class="mb-5">
+                        <div class="d-flex align-items-start mb-4">
+                            <i class="fas fa-map-marker-alt text-secondary fs-4 me-3 mt-1"></i>
+                            <div>
+                                <h5 class="text-white">Head Office Address</h5>
+                                <p class="text-white-50 mb-0">
+                                    Beyond Concept Design World<br>
+                                    Near To Mannadi Old Kavu Temple<br>
+                                    Mannady P.O., Pathanamthitta, Kerala<br>
+                                    India
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-start mb-4">
+                            <i class="fas fa-phone text-secondary fs-4 me-3 mt-1"></i>
+                            <div>
+                                <h5 class="text-white">Contact Information</h5>
+                                <p class="text-white-50 mb-0">
+                                    Office: +91 8086 335563<br>
+                                    Email: enquiry@beyondconceptdw.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="row mb-3">
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" class="form-control" placeholder="First Name *" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Last Name *" required>
+                                </div>
+                            </div>
+                            
+                            <div class="row mb-3">
+                                <div class="col-md-6 mb-3">
+                                    <input type="tel" class="form-control" placeholder="Phone Number *" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Email *" required>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="5" placeholder="Comment or Message *" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary-custom w-100">
+                                <i class="fas fa-paper-plane me-2"></i> Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="mb-4">About Us</h4>
+                    <p class="mb-4">Over the years, the growing demand for home construction led to the evolution of Beyond Concept Design World into a dedicated team of skilled and hardworking professionals, committed to delivering high-quality home designs and ensuring timely project completion.</p>
+                    <div class="mt-4">
+                        <a href="#" class="btn btn-outline-light btn-sm me-2 mb-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm me-2 mb-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm me-2 mb-2"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm me-2 mb-2"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-5 mb-lg-0">
+                    <h4 class="mb-4">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="#home" class="d-block mb-2">Home</a>
+                        <a href="#about" class="d-block mb-2">About Us</a>
+                        <a href="#services" class="d-block mb-2">Services</a>
+                        <a href="#projects" class="d-block mb-2">Projects</a>
+                        <a href="#blog" class="d-block mb-2">Blogs</a>
+                        <a href="#contact" class="d-block mb-2">Contact Us</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 mb-5 mb-lg-0">
+                    <h4 class="mb-4">Our Services</h4>
+                    <div class="footer-links">
+                        <a href="#services" class="d-block mb-2">3D Elevation Design</a>
+                        <a href="#services" class="d-block mb-2">2D Elevation</a>
+                        <a href="#services" class="d-block mb-2">Architectural Plans</a>
+                        <a href="#services" class="d-block mb-2">Interior Designing</a>
+                        <a href="#services" class="d-block mb-2">Vastu Consulting</a>
+                        <a href="#services" class="d-block mb-2">Landscaping</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h4 class="mb-4">Contact Us</h4>
+                    <p class="mb-3"><i class="fas fa-map-marker-alt me-2"></i> Near To Mannadi Old Kavu Temple, Mannady P.O., Pathanamthitta, Kerala</p>
+                    <p class="mb-3"><i class="fas fa-phone me-2"></i> +91 8086 335563</p>
+                    <p class="mb-3"><i class="fas fa-envelope me-2"></i> enquiry@beyondconceptdw.com</p>
+                    <p><i class="fas fa-globe me-2"></i> www.beyondconceptdw.com</p>
+                </div>
+            </div>
+            
+            <div class="copyright mt-5 pt-4 border-top border-white-10 text-center">
+                <p class="mb-0">Beyond Concept Design World © 2025. All Rights Reserved.</p>
+                <p class="mb-0"><a href="#" class="text-white-50">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/918086335563" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Blog Modals -->
+    
+    <!-- Blog Modal 1 - Rain-Ready Homes -->
+    <div class="modal fade blog-modal" id="blogModal1" tabindex="-1" aria-labelledby="blogModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="blogModal1Label">Rain-Ready Homes: Monsoon-Proof Design Tips for Kerala Residences</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                             alt="Monsoon-Proof Design" class="img-fluid rounded-3 mb-4">
+                    </div>
+                    
+                    <div class="blog-meta mb-4 text-center">
+                        <span class="badge bg-warning me-2">Design Tips</span>
+                        <span><i class="far fa-user me-1"></i> By Beyond Concept</span>
+                        <span class="mx-3"><i class="far fa-calendar me-1"></i> February 10, 2026</span>
+                        <span><i class="far fa-clock me-1"></i> 5 min read</span>
+                    </div>
+                    
+                    <div class="blog-content-detail">
+                        <p class="lead"><strong>Trusted Builders in Adoor & Pathanamthitta</strong></p>
+                        
+                        <p>Kerala's lush greenery and scenic monsoons are a blessing, but for homeowners, heavy rainfall brings unique construction challenges. At Beyond Concept, we've mastered the art of creating homes that not only withstand Kerala's intense monsoon seasons but also thrive in them.</p>
+                        
+                        <h4 class="mt-4 mb-3">Essential Monsoon-Proof Design Strategies</h4>
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="card mb-3 border-0 bg-light">
+                                    <div class="card-body">
+                                        <h5><i class="fas fa-water text-primary me-2"></i> Advanced Water Drainage Systems</h5>
+                                        <p class="mb-0">Strategic placement of gutters, downspouts, and French drains to efficiently channel rainwater away from the foundation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card mb-3 border-0 bg-light">
+                                    <div class="card-body">
+                                        <h5><i class="fas fa-home text-primary me-2"></i> Elevated Foundations</h5>
+                                        <p class="mb-0">Raising the plinth level to prevent waterlogging and moisture seepage during heavy rains.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="card mb-3 border-0 bg-light">
+                                    <div class="card-body">
+                                        <h5><i class="fas fa-wind text-primary me-2"></i> Optimized Ventilation</h5>
+                                        <p class="mb-0">Cross-ventilation designs that prevent dampness, mold growth, and maintain healthy indoor air quality.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card mb-3 border-0 bg-light">
+                                    <div class="card-body">
+                                        <h5><i class="fas fa-tint text-primary me-2"></i> Water-Resistant Materials</h5>
+                                        <p class="mb-0">Special treatments for walls, woodwork, and foundations using monsoon-resistant materials.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h4 class="mt-4 mb-3">Key Construction Tips</h4>
+                        <ul class="mb-4">
+                            <li><strong>Roof Slope Optimization:</strong> 30-40 degree angles for efficient water runoff</li>
+                            <li><strong>Damp-Proof Course:</strong> Multiple layers at critical points</li>
+                            <li><strong>Window & Door Sealing:</strong> Weather-resistant seals and treatments</li>
+                            <li><strong>Terrace Waterproofing:</strong> Advanced membrane systems</li>
+                            <li><strong>Landscape Grading:</strong> Proper slope away from the structure</li>
+                        </ul>
+                        
+                        <div class="alert alert-info">
+                            <h5><i class="fas fa-lightbulb me-2"></i> Pro Tip from Our Experts</h5>
+                            <p class="mb-0">Always conduct a pre-monsoon inspection of your home's drainage systems and waterproofing. Early detection of issues can prevent major damage during heavy rains.</p>
+                        </div>
+                        
+                        <p>Our experience across Adoor and Pathanamthitta has shown that proper monsoon-proofing can extend a home's lifespan by decades while significantly reducing maintenance costs. We blend traditional Kerala architectural wisdom with modern waterproofing technologies to create truly resilient homes.</p>
+                        
+                        <div class="text-center mt-5">
+                            <a href="#contact" class="btn btn-primary-custom" data-bs-dismiss="modal">
+                                <i class="fas fa-home me-2"></i> Get Your Monsoon-Proof Home Design
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Blog Modal 2 - From Sketch to Structure -->
+    <div class="modal fade blog-modal" id="blogModal2" tabindex="-1" aria-labelledby="blogModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="blogModal2Label">From Sketch to Structure: The Trusted Journey of a Dream Home with Beyond Concept</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                             alt="Dream Home Journey" class="img-fluid rounded-3 mb-4">
+                    </div>
+                    
+                    <div class="blog-meta mb-4 text-center">
+                        <span class="badge bg-primary me-2">Construction</span>
+                        <span><i class="far fa-user me-1"></i> By Beyond Concept Team</span>
+                        <span class="mx-3"><i class="far fa-calendar me-1"></i> January 28, 2026</span>
+                        <span><i class="far fa-clock me-1"></i> 6 min read</span>
+                    </div>
+                    
+                    <div class="blog-content-detail">
+                        <p class="lead">At Beyond Concept, we believe that building a home is not just about bricks and cement—it's about trust, care, and turning dreams into reality. As the most trusted construction company in Adoor and Pathanamthitta, we follow a meticulous process that ensures every client's vision is perfectly translated into their dream home.</p>
+                        
+                        <h4 class="mt-4 mb-3">Our 7-Step Journey to Your Dream Home</h4>
+                        
+                        <div class="timeline">
+                            <div class="timeline-step">
+                                <div class="timeline-icon">1</div>
+                                <div class="timeline-content">
+                                    <h5>Vision Consultation & Conceptualization</h5>
+                                    <p>We begin with deep conversations to understand your lifestyle, preferences, and aspirations. Our team creates initial concept sketches that align with your vision.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-step">
+                                <div class="timeline-icon">2</div>
+                                <div class="timeline-content">
+                                    <h5>3D Visualization & Design Development</h5>
+                                    <p>Using advanced 3D modeling software, we create photorealistic renderings of your future home. This allows you to visualize every detail before construction begins.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-step">
+                                <div class="timeline-icon">3</div>
+                                <div class="timeline-content">
+                                    <h5>Detailed Planning & Approvals</h5>
+                                    <p>Our architects prepare comprehensive architectural drawings while ensuring compliance with Kerala's building codes and Vastu principles. We handle all permit applications.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-step">
+                                <div class="timeline-icon">4</div>
+                                <div class="timeline-content">
+                                    <h5>Transparent Estimation & Material Selection</h5>
+                                    <p>We provide detailed cost breakdowns with no hidden charges. Together, we select premium materials that balance quality, aesthetics, and budget.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-step">
+                                <div class="timeline-icon">5</div>
+                                <div class="timeline-content">
+                                    <h5>Precision Construction Phase</h5>
+                                    <p>Our skilled craftsmen bring the designs to life with meticulous attention to detail. Regular site visits and updates keep you informed at every stage.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-step">
+                                <div class="timeline-icon">6</div>
+                                <div class="timeline-content">
+                                    <h5>Interior Execution & Finishing</h5>
+                                    <p>From electrical work to painting and flooring, we handle every aspect of interior finishing with precision and care.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-step">
+                                <div class="timeline-icon">7</div>
+                                <div class="timeline-content">
+                                    <h5>Handover & Post-Construction Support</h5>
+                                    <p>We conduct comprehensive walkthroughs, provide all documentation, and remain available for any support you may need after moving in.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-success mt-4">
+                            <h5><i class="fas fa-award me-2"></i> Why Choose Beyond Concept?</h5>
+                            <ul class="mb-0">
+                                <li>95+ years of construction excellence</li>
+                                <li>Three generations of trusted craftsmanship</li>
+                                <li>Transparent communication at every stage</li>
+                                <li>Timely completion without compromising quality</li>
+                                <li>Comprehensive after-service support</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="text-center mt-5">
+                            <a href="#contact" class="btn btn-primary-custom" data-bs-dismiss="modal">
+                                <i class="fas fa-handshake me-2"></i> Start Your Dream Home Journey
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Blog Modal 3 - Building Dreams -->
+    <div class="modal fade blog-modal" id="blogModal3" tabindex="-1" aria-labelledby="blogModal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="blogModal3Label">Building Dreams: Why Beyond Concept is the Future of Construction in Adoor</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                             alt="Future of Construction" class="img-fluid rounded-3 mb-4">
+                    </div>
+                    
+                    <div class="blog-meta mb-4 text-center">
+                        <span class="badge bg-info me-2">Innovation</span>
+                        <span><i class="far fa-user me-1"></i> By Beyond Concept</span>
+                        <span class="mx-3"><i class="far fa-calendar me-1"></i> January 15, 2026</span>
+                        <span><i class="far fa-clock me-1"></i> 7 min read</span>
+                    </div>
+                    
+                    <div class="blog-content-detail">
+                        <p class="lead">In today's fast-paced world, building a home or commercial space is not just about bricks and cement—it's about creating a lifestyle, a vision, and a long-lasting structure that stands the test of time. At Beyond Concept, we combine traditional craftsmanship with modern technology to deliver exceptional results.</p>
+                        
+                        <h4 class="mt-4 mb-3">Our Innovative Approach to Modern Construction</h4>
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="feature-card p-4 mb-3 rounded-3 border">
+                                    <div class="feature-icon mb-3">
+                                        <i class="fas fa-cube fa-3x text-primary"></i>
+                                    </div>
+                                    <h5>3D Visualization Technology</h5>
+                                    <p class="mb-0">See your home in photorealistic detail before construction begins. Make design changes virtually, saving time and costs.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-card p-4 mb-3 rounded-3 border">
+                                    <div class="feature-icon mb-3">
+                                        <i class="fas fa-leaf fa-3x text-success"></i>
+                                    </div>
+                                    <h5>Sustainable Building Practices</h5>
+                                    <p class="mb-0">Eco-friendly materials, rainwater harvesting, and energy-efficient designs that reduce environmental impact.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="feature-card p-4 mb-3 rounded-3 border">
+                                    <div class="feature-icon mb-3">
+                                        <i class="fas fa-home fa-3x text-warning"></i>
+                                    </div>
+                                    <h5>Smart Home Integration</h5>
+                                    <p class="mb-0">Future-ready homes with integrated smart systems for security, lighting, temperature control, and energy management.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-card p-4 mb-3 rounded-3 border">
+                                    <div class="feature-icon mb-3">
+                                        <i class="fas fa-shield-alt fa-3x text-danger"></i>
+                                    </div>
+                                    <h5>Quality Assurance Protocols</h5>
+                                    <p class="mb-0">Rigorous quality checks at every stage of construction, ensuring durability and safety standards are exceeded.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h4 class="mt-4 mb-3">The Beyond Concept Difference</h4>
+                        
+                        <div class="table-responsive mb-4">
+                            <table class="table table-bordered">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Traditional Builders</th>
+                                        <th>Beyond Concept</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2D blueprints only</td>
+                                        <td><strong>3D photorealistic visualization</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Limited design options</td>
+                                        <td><strong>Customized design solutions</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Delayed timelines</td>
+                                        <td><strong>Guaranteed timely completion</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hidden costs</td>
+                                        <td><strong>Transparent pricing</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Limited after-service</td>
+                                        <td><strong>Comprehensive post-construction support</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="card bg-light border-0 p-4 mb-4">
+                            <h5><i class="fas fa-quote-left text-primary me-2"></i> Client Success Story</h5>
+                            <p class="mb-0">"Beyond Concept transformed our traditional Kerala home vision into a modern masterpiece while preserving our cultural heritage. Their 3D visualization helped us perfect every detail before construction." - <strong>Mr. Rajesh Kumar, Adoor</strong></p>
+                        </div>
+                        
+                        <div class="text-center mt-5">
+                            <a href="#contact" class="btn btn-primary-custom me-3" data-bs-dismiss="modal">
+                                <i class="fas fa-calendar me-2"></i> Schedule Consultation
+                            </a>
+                            <a href="#projects" class="btn btn-outline-primary" data-bs-dismiss="modal">
+                                <i class="fas fa-images me-2"></i> View Our Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Splide Slider -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <!-- Counter Up -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                
+                if (this.hash && !this.href.includes('wa.me')) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        // Update active nav link
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                        
+                        // Scroll to section
+                        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                        const targetPosition = targetElement.offsetTop - navbarHeight - 20;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Counter animation
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-count'));
+            const increment = target / 100;
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                element.textContent = Math.floor(current);
+                
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                }
+            }, 20);
+        }
+
+        function checkCounter() {
+            const counters = document.querySelectorAll('.stat-number');
+            
+            counters.forEach(counter => {
+                const counterPosition = counter.getBoundingClientRect().top;
+                
+                if (counterPosition < window.innerHeight - 100 && counter.textContent === '0' && counter.hasAttribute('data-count')) {
+                    animateCounter(counter);
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkCounter);
+        setTimeout(checkCounter, 500);
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate form
+            const inputs = this.querySelectorAll('input, textarea');
+            let isValid = true;
+            
+            inputs.forEach(input => {
+                if (input.hasAttribute('required') && !input.value.trim()) {
+                    isValid = false;
+                    input.classList.add('is-invalid');
+                } else {
+                    input.classList.remove('is-invalid');
+                }
+            });
+            
+            if (!isValid) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            const submitBtn = this.querySelector('.btn-primary-custom');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                // Success message
+                const successHTML = `
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <h4 class="alert-heading"><i class="fas fa-check-circle me-2"></i> Thank You!</h4>
+                        <p>Your inquiry has been submitted successfully. Our design expert will contact you within 24 hours.</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                `;
+                
+                // Insert alert before form
+                this.insertAdjacentHTML('beforebegin', successHTML);
+                
+                // Reset form
+                this.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                // Remove alert after 5 seconds
+                setTimeout(() => {
+                    const alert = document.querySelector('.alert');
+                    if (alert) {
+                        alert.remove();
+                    }
+                }, 5000);
+            }, 1500);
+        });
+
+        // 3D Hover Effects
+        document.querySelectorAll('.service-card, .project-card, .blog-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-15px) scale(1.02)';
+                this.style.boxShadow = '0 30px 70px rgba(0, 0, 0, 0.2)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+                this.style.boxShadow = '0 15px 50px rgba(0, 0, 0, 0.1)';
+            });
+        });
+
+        // Floating elements animation
+        function animateFloatingElements() {
+            const elements = document.querySelectorAll('.floating-element');
+            elements.forEach((el, index) => {
+                el.style.animationDelay = `${index * 2}s`;
+            });
+        }
+
+        // Initialize on load
+        window.addEventListener('load', function() {
+            animateFloatingElements();
+            checkCounter();
+            
+            // Add active class to current nav link
+            function updateActiveNavLink() {
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('.nav-link');
+                
+                let currentSection = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                    
+                    if (window.scrollY >= (sectionTop - navbarHeight - 100)) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${currentSection}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', updateActiveNavLink);
+            updateActiveNavLink();
+        });
+
+        // WhatsApp button animation
+        const whatsappBtn = document.querySelector('.whatsapp-float');
+        if (whatsappBtn) {
+            whatsappBtn.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.2) rotate(10deg)';
+            });
+            
+            whatsappBtn.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) rotate(0deg)';
+            });
+        }
+    </script>
+
+    <style>
+        /* Additional Styles for Blog Modals */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin: 2rem 0;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+        }
+        
+        .timeline-step {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            left: -35px;
+            top: 0;
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+            z-index: 2;
+        }
+        
+        .timeline-content {
+            padding-left: 20px;
+        }
+        
+        .feature-card {
+            transition: var(--transition);
+            height: 100%;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        /* Enhanced button styles */
+        .btn-outline-primary {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .btn-outline-primary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(10, 61, 98, 0.3);
+        }
+    </style>
+</body>
+</html>
